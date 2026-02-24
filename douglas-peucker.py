@@ -22,7 +22,7 @@ SAIDA_SHP  = r"resultado\curvas_50k_generalizadas_v2.shp"
 
 CAMPO_COTA = "COTA"     # campo de altitude
 EQUIDIST   = 20         # metros
-EPSILON_DP = 2.5        # tolerância gráfica (em metros)
+EPSILON_DP = 10        # tolerância gráfica (em metros)
 
 os.makedirs("resultado", exist_ok=True)
 
