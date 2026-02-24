@@ -24,8 +24,8 @@ CSV_AVALIACAO = r"resultado/avaliacao_hausdorff.csv"
 
 CAMPO_COTA = "COTA"     # campo de altitude
 EQUIDIST   = 20         # metros
-EPSILON_DP = 2.5        # tolerância gráfica (em metros)
-LIMITE_HD = 6.0
+EPSILON_DP = 10        # tolerância gráfica (em metros)
+LIMITE_HD = 10
 
 os.makedirs("resultado", exist_ok=True)
 
