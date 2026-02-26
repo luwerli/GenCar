@@ -1,2 +1,2 @@
 # GenCar
-Repositório de scripts em python para generalização automática
+Repositório de scripts em python para generalização cartográfica automática
