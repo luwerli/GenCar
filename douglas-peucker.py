@@ -16,8 +16,8 @@ import os
 # 1. PARÂMETROS GERAIS
 # ---------------------------------------------------------
 
-CURVAS_SHP = r"E:\ENGENHARIA CARTOGRÁFICA\MI_2980-1-SE\REL_Curva_Nivel_L.shp"
-RIOS_SHP   = r"E:\ENGENHARIA CARTOGRÁFICA\MI_2980-1-SE\HID_Trecho_Drenagem_L.shp"
+CURVAS_SHP = r"files\REL_Curva_Nivel_L.shp"
+RIOS_SHP   = r"files\HID_Trecho_Drenagem_L.shp"
 SAIDA_SHP  = r"resultado\curvas_50k_generalizadas_v2.shp"
 
 CAMPO_COTA = "COTA"     # campo de altitude
