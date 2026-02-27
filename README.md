@@ -125,11 +125,8 @@ GenCar/
 │
 ├── data/
 ├── scripts/
-│   ├── selection.py
-│   ├── buffer_model.py
-│   ├── intersection.py
-│   ├── simplification.py
-│   ├── evaluation.py
+│   ├── douglas-peucker.py
+│   ├── douglas+hausdorff.py
 │
 ├── outputs/
 └── README.md
