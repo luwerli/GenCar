@@ -38,7 +38,7 @@ GenCar proposes an automated, topology-aware generalization methodology to addre
 
 The workflow is structured into modular processing stages:
 
-1. Scale-Based Feature Selection
+**1. Scale-Based Feature Selection**
 
 - Original contour interval: 10m
 - Target interval: 20m
@@ -48,7 +48,7 @@ The workflow is structured into modular processing stages:
 
 ✔ Preserves structural morphology
 
-2. Hydrographic Influence Modeling
+**2. Hydrographic Influence Modeling**
 
 - Buffer generation around drainage network
 - Identification of contour–river interaction zones
@@ -58,7 +58,7 @@ The workflow is structured into modular processing stages:
 
 ✔ Defines simplification restriction zones
 
-3. Intersection Preservation Logic
+**3. Intersection Preservation Logic**
 
 - Overlay between contours and hydrography
 - Extraction of intersection vertices
@@ -68,7 +68,7 @@ The workflow is structured into modular processing stages:
 
 ✔ Maintains hydrological continuity
 
-4. Modified Douglas–Peucker Algorithm
+**4. Modified Douglas–Peucker Algorithm**
 
 - The standard Douglas–Peucker algorithm was adapted to:
 - Preserve fixed (topological) vertices
@@ -82,7 +82,7 @@ The workflow is structured into modular processing stages:
 
 ✔ Supports recursive constrained simplification
 
-5. Quantitative Spatial Evaluation
+**5. Quantitative Spatial Evaluation**
 
 Generalization quality is assessed using:
 
