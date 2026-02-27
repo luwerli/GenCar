@@ -45,6 +45,7 @@ The workflow is structured into modular processing stages:
 - Elevation modulus filtering
 
 ✔ Reduces visual density
+
 ✔ Preserves structural morphology
 
 2. Hydrographic Influence Modeling
@@ -54,6 +55,7 @@ The workflow is structured into modular processing stages:
 - Spatial constraint definition
 
 ✔ Detects topological dependencies
+
 ✔ Defines simplification restriction zones
 
 3. Intersection Preservation Logic
@@ -63,6 +65,7 @@ The workflow is structured into modular processing stages:
 - Fixed vertex tagging
 
 ✔ Prevents topological rupture
+
 ✔ Maintains hydrological continuity
 
 4. Modified Douglas–Peucker Algorithm
@@ -74,7 +77,9 @@ The workflow is structured into modular processing stages:
 - Avoid fragmentation
 
 ✔ Reduces redundant vertices
+
 ✔ Preserves morphological integrity
+
 ✔ Supports recursive constrained simplification
 
 5. Quantitative Spatial Evaluation
