@@ -128,12 +128,19 @@ Data Model:
 
 GenCar/
 │
+
 ├── data/
+
 ├── scripts/
+
 │   ├── douglas-peucker.py
+
 │   ├── douglas+hausdorff.py
+
 │
+
 ├── outputs/
+
 └── README.md
 
 Designed for modular scalability and research extensibility.
