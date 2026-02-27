@@ -1,7 +1,7 @@
 # 🗺️ CartoGen – Automatic Cartographic Generalization
 **Overview**
 
-GenCar is a modular Python framework for automated multi-scale topographic generalization with explicit topological constraints and quantitative spatial validation.
+CartoGen is a modular Python framework for automated multi-scale topographic generalization with explicit topological constraints and quantitative spatial validation.
 
 The system was designed to bridge traditional cartographic theory with reproducible geospatial data engineering workflows.
 
@@ -30,7 +30,7 @@ Additionally, conventional simplification algorithms often break:
 - Topological continuity
 - Morphological integrity
 
-GenCar proposes an automated, topology-aware generalization methodology to address these limitations.
+CartoGen proposes an automated, topology-aware generalization methodology to address these limitations.
 
 ---
 
