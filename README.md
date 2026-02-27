@@ -1,47 +1,173 @@
-# GenCar – Generalização Cartográfica Automatizada
-📌 Descrição
+# 🗺️ CartoGen – Automatic Cartographic Generalization
+**Overview**
 
-Este repositório apresenta a implementação de rotinas em Python para generalização cartográfica automática de curvas de nível, com foco na simplificação geométrica utilizando o algoritmo Douglas-Peucker.
+GenCar is a modular Python framework for automated multi-scale topographic generalization with explicit topological constraints and quantitative spatial validation.
 
-O objetivo é automatizar a geração de cartas topográficas generalizadas, reduzindo a complexidade geométrica mantendo a coerência espacial e a legibilidade cartográfica.
+The system was designed to bridge traditional cartographic theory with reproducible geospatial data engineering workflows.
 
-Área de estudo: Carta topográfica de Rosário do Sul (MI_2980-1-SE).
+Target scale transition: 1:25,000 → 1:50,000
 
-🎯 Problema
+---
 
-A generalização cartográfica é um processo essencial na produção de mapas em diferentes escalas. A simplificação manual é demorada e sujeita a inconsistências.
+**Problem Statement**
 
-Este projeto busca:
+Multi-scale topographic map production requires:
 
-• Reduzir vértices redundantes
-• Manter forma e estrutura das curvas
-• Automatizar o processo de simplificação
-• Permitir ajuste de tolerância conforme escala
+- Structured feature selection rules
+- Morphological preservation
+- Hydrographic-topographic consistency
+- Controlled geometric simplification
 
-🧠 Metodologia
+Traditional manual generalization is:
 
-O algoritmo implementado é baseado no método de Douglas-Peucker, que:
+- Labor-intensive
+- Difficult to standardize
+- Hard to reproduce
+- Not scalable for national mapping systems
 
-• Define uma linha entre os extremos da curva
-• Calcula a distância perpendicular máxima
-• Mantém pontos acima da tolerância
-• Recursivamente simplifica os segmentos
+Additionally, conventional simplification algorithms often break:
+- Contour–river intersections
+- Topological continuity
+- Morphological integrity
 
-Foram testados diferentes valores de tolerância para avaliar:
-• Redução percentual de vértices
-• Impacto visual
-• Manutenção da morfologia do relevo
+GenCar proposes an automated, topology-aware generalization methodology to address these limitations.
 
-🛠 Tecnologias Utilizadas e Softwares
+---
 
-• GeoPandas
-• NumPy
-• Shapely
-• Matplotlib
-• QGIS (validação visual)
+**Solution Architecture**
 
-📊 Resultados
+The workflow is structured into modular processing stages:
 
-• Redução significativa do número de vértices
-• Manutenção da coerência geométrica
-• Automatização do fluxo de generalização
+1. Scale-Based Feature Selection
+
+- Original contour interval: 10m
+- Target interval: 20m
+- Elevation modulus filtering
+
+✔ Reduces visual density
+✔ Preserves structural morphology
+
+2. Hydrographic Influence Modeling
+
+- Buffer generation around drainage network
+- Identification of contour–river interaction zones
+- Spatial constraint definition
+
+✔ Detects topological dependencies
+✔ Defines simplification restriction zones
+
+3. Intersection Preservation Logic
+
+- Overlay between contours and hydrography
+- Extraction of intersection vertices
+- Fixed vertex tagging
+
+✔ Prevents topological rupture
+✔ Maintains hydrological continuity
+
+4. Modified Douglas–Peucker Algorithm
+
+- The standard Douglas–Peucker algorithm was adapted to:
+- Preserve fixed (topological) vertices
+- Apply controlled epsilon tolerance
+- Maintain vertex sequence order
+- Avoid fragmentation
+
+✔ Reduces redundant vertices
+✔ Preserves morphological integrity
+✔ Supports recursive constrained simplification
+
+5. Quantitative Spatial Evaluation
+
+Generalization quality is assessed using:
+
+- Vertex count reduction
+- Total length comparison
+- Hausdorff Distance (geometric similarity metric)
+
+This enables:
+
+- Objective validation
+- Scenario comparison
+- Parameter calibration
+
+---
+
+**Technical Highlights**
+
+- Topology-aware geometric simplification
+- Hydrographic-constrained generalization logic
+- Modular spatial processing pipeline
+- Quantitative validation framework
+- Reproducible GeoDataFrame-based workflow
+
+---
+
+**Tech Stack**
+
+- Python 3
+- GeoPandas
+- Shapely
+- NumPy
+- Matplotlib
+- QGIS (visual validation)
+
+Data Model:
+
+- Shapefile (.shp)
+- GeoDataFrame-based processing pipeline
+
+---
+
+**Repository Structure**
+
+GenCar/
+│
+├── data/
+├── scripts/
+│   ├── selection.py
+│   ├── buffer_model.py
+│   ├── intersection.py
+│   ├── simplification.py
+│   ├── evaluation.py
+│
+├── outputs/
+└── README.md
+
+Designed for modular scalability and research extensibility.
+
+---
+
+**Applications**
+
+Systematic topographic mapping
+
+National cartographic production workflows
+
+Automated scale transitions
+
+Topology-preserving map generalization
+
+Spatial algorithm research
+
+---
+
+**Future Improvements**
+
+Adaptive epsilon based on terrain curvature
+
+Multi-scale automation (1:100k, 1:250k)
+
+PostGIS integration
+
+Performance optimization for large datasets
+
+Extension to urban feature generalization
+
+---
+
+Authors
+
+Luiza Werli Rosa
+Thiago Wallace Nascimento da Paz
+Geospatial Data Engineering & Cartographic Automation
